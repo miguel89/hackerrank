@@ -46,6 +46,9 @@ arrayA.each { a ->
                 }
             }
         }
+        // arrayB.removeAll {
+        //     it < max
+        // }
     }
 }
 def result = 0
