@@ -18,25 +18,28 @@ def gcd(x, y)
   y
 end
 
-def find_max(a, b, flag)
+def find_max(a, b)
   max = max_sum = 0
+  i = j = 0
 
-  a.each do |k|
-    next if k <= max
-    b.each do |c|
-      next if c < max
-      g = gcd k, c
-      if g > max
-        max = g
-        puts "#{k} #{c} #{g}"
-        max_sum = k + c
-        if flag && (max == k || max == c)
-          return max_sum
-        end
-      elsif g == max && k + c > max_sum
-        max_sum = k + c
-      end
+  loop do
+    g = gcd a[i], b[j]
+    if g > max
+      max = g
+      puts "#{a[i]} #{b[j]} #{g}"
+      max_sum = a[i] + b[j]
+      return max_sum if max == a[i] || max == b[j]
+    elsif g == max && a[i] + b[j] > max_sum
+      max_sum = a[i] + b[j]
+      return max_sum if max == a[i] || max == b[j]
     end
+    if a[i] > b[j]
+      i += 1
+    else
+      j += 1
+    end
+
+    break if i >= a.size || j >= b.size
   end
   max_sum
 end
@@ -52,4 +55,4 @@ else
   second = b
 end
 
-puts find_max(first, second, true)
+puts find_max first, second
