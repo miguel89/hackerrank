@@ -3,7 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/hackerrank.iml" filepath="$PROJECT_DIR$/.idea/hackerrank.iml" />
-      <module fileurl="file://C:\Users\amara\projects\hackerrank\hackerrank.iml" filepath="C:\Users\amara\projects\hackerrank\hackerrank.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hackerrank.iml" filepath="$PROJECT_DIR$/hackerrank.iml" />
     </modules>
   </component>
 </project>
