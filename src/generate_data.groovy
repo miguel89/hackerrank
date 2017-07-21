@@ -3,6 +3,7 @@ def q = Integer.valueOf(args[2])
 def a = [], qa = []
 def r = new Random()
 def limit1 = Integer.valueOf(args[3])
+def limit2 = Integer.valueOf(args[4])
 
 def file = new File(args[0])
 
@@ -11,7 +12,7 @@ n.times {
 }
 
 q.times {
-	qa << [r.nextInt(limit1), r.nextInt(limit1)]
+	qa << [r.nextInt(limit2), r.nextInt(limit2)]
 }
 
 file << "${n} ${q}\n"
